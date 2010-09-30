@@ -1,4 +1,4 @@
-(defproject hozumi/clj-embed-s "1.0.0-SNAPSHOT"
+(defproject org.clojars.hozumi/clj-embed-s "1.0.0-SNAPSHOT"
   :description "Embedding Clojure expression into a string"
   :dependencies [[org.clojure/clojure "1.2.0"]
                  [org.clojure/clojure-contrib "1.2.0"]]
