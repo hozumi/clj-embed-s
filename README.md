@@ -1,7 +1,7 @@
 # clj-embed-s
 
 clj-embed-s enables you to embed Clojure expression into a string like Ruby.<br>
-The trick is that when the macro is expanded, it divides a string into parts, which given to str function.
+The trick is that when the macro is expanded, it divides a string into parts, which are given to str function.
 
 ## Usage
 
