@@ -16,4 +16,4 @@ The trick is that when the macro is expanded, it divides a string into parts, wh
 
 ## Installation
 Leiningen
-    [hozumi/clj-embed-s "1.0.0-SNAPSHOT"]
+    [org.clojars.hozumi/clj-embed-s "1.0.0-SNAPSHOT"]
