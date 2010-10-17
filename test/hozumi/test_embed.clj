@@ -1,6 +1,7 @@
 (ns hozumi.test-embed
   (:use [hozumi.embed] :reload)
-  (:use [clojure.test]))
+  (:use [clojure.test])
+  (:require [clojure.java.io :as io]))
 
 (deftest test-embed
   (let [a 2]
@@ -12,4 +13,7 @@
 	 "abcde"   "a#{(str \\b \\c \\d)}e"
 	 "[:a 1]"  "#{[:a 1]}"
 	 "{:a 1}"  "#{{:a 1}}"
-	 "#{:a}"   "#{#{:a}}")))
+	 "#{:a}"   "#{#{:a}}")
+    (is (= "あいうえお3漢字" (embed (io/file "test/resources/utf_8.txt"))))
+    (is (= "あいうえお3漢字" (embed (io/file "test/resources/euc_jp.txt"))))
+    (is (= "あいうえお3漢字" (embed (io/file "test/resources/shift_jis.txt"))))))
