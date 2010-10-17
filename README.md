@@ -14,14 +14,14 @@ The trick is that when the macro is expanded, it divides a string into parts, wh
       (embed "#{gree} world!"))
     => "Hello world!"
 
-You can embed expression into a file.
+You can also embed expression into a text file.
 
-hello.txt
+    hello.txt
     abc#{(+ 1 2)}def
-then
+
     (embed (java.io.File. "hello.txt"))
     => "abc3def"
-Note that embeding exp is executed when macro expanded.
+Note that analyzing text is executed when macro expanded.
 
 ## Installation
 Leiningen
