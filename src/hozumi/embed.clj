@@ -9,7 +9,8 @@
     (let [c (.read pbr)
 	  c (if (= -1 c) -1 (char c))]
       (condp = c
-	  -1 `(str ~@acc ~(.toString sb))
+	  -1 (do (.close pbr)
+		 `(str ~@acc ~(.toString sb)))
 	  \# (let [c2 (.read pbr)
 		   c2 (if (= -1 c) -1 (char c2))]
 	       (condp = c2
